@@ -23,5 +23,18 @@ public class Main {
         operatorExample.operatorTest5();
         operatorExample.operatorTest6();
         operatorExample.operatorTest7();
+
+
+        /*for( ; ; ){ //무한 루프
+            실행문장
+        }
+        while(true){
+            실행문장
+        }
+        do{
+            실행문장
+        }while(true);
+
+        */
     }
 }

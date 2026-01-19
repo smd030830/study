@@ -48,8 +48,15 @@ public class operatorExample {
         if(y <= 0){
             System.out.println("can't divide by zero");
         }else {
-            double result = z +10;
+            double result = z + 10;
             System.out.println(result);
+        }
+    }
+    public void rooping(){
+        int i =0;
+        int  j = 100;
+        for( ; i<=50 && j >=50;){
+
         }
     }
 }
