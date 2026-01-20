@@ -15,5 +15,10 @@ public class Main {
         obj.exam5_9();
         obj.exam6_10();
         obj.exam6_11();
+        obj.examArray01();
+        obj.examArray02();
+        obj.examArray03();
+        obj.examArray04();
+        obj.examArray05();
     }
 }
