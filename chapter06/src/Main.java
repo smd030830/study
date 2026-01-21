@@ -29,7 +29,7 @@ public class Main {
         obj1.arrayTest4_2();
         obj1.arrayTest4_3();
         obj1.arryTest4_4(6);
-        obj1.arrayTest4_5(7);
-        obj1.arrayTest4_6(5);
+        obj1.arrayTest4_5(5);
+        obj1.arrayTest4_6(7);
     }
 }
