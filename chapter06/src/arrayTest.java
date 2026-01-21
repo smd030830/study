@@ -68,18 +68,18 @@ public class arrayTest {
                 , {0, 1, 0, 1, 0, 0}
                 , {0, 0, 1, 1, 0, 1}
                 , {1, 0, 0, 0, 1, 0}
-            };
+        };
 
-            int count0 = 0;
-            int count1 = 0;
-            for (int i = 0; i < intDemention2.length; i++) {
-                for (int j = 0; j < intDemention2[i].length; j++) {
-                    if (intDemention2[i][j] == 0) {
-                        count0++;
-                    } else if (intDemention2[i][j] == 1) {
-                        count1++;
-                    }
+        int count0 = 0;
+        int count1 = 0;
+        for (int i = 0; i < intDemention2.length; i++) {
+            for (int j = 0; j < intDemention2[i].length; j++) {
+                if (intDemention2[i][j] == 0) {
+                    count0++;
+                } else if (intDemention2[i][j] == 1) {
+                    count1++;
                 }
+            }
         }
         System.out.println("0의 갯수는 " + count0 + "개, 1의 갯수는 " + count1 + "개.");
     }
@@ -143,8 +143,142 @@ public class arrayTest {
             System.out.println();
         }
     }
-    public void arrayTest4() {
-        /*
-        */
+
+    double[] dArray = new double[25];
+
+    public void arrayTest4_1() {
+         /*1차원 배열 double[] dArray 갯수 25개 배열을 생성한다.
+		이 배열의 원소에는 난수 0.000 ~ 99.99999 값 25개 가 저장되도록 한다.*/
+        for (int i = 0; i < dArray.length; i++) {
+            dArray[i] = Math.random() * 100;
+        }
+    }
+
+    public void arrayTest4_2() {
+        /*1차원 배열 int[] nArray 갯수 25개 배열을 생성한다.
+		이 배열의 원소는 dArray 배열원소에서 소숫점빼고 정수 부분만 저장한다.
+		전체 원소들의 합과 평균을 구해서 출력해보자*/
+        int[] nArray = new int[25];
+        int sum = 0;
+
+        for (int i = 0; i < nArray.length; i++) {
+            nArray[i] = (int) dArray[i];
+            sum += nArray[i];
+        }
+
+        double avg = (double) sum / nArray.length;
+        System.out.println("합계: " + sum + ", 평균: " + avg);
+    }
+
+    public void arrayTest4_3() {
+        /*1차원 배열 String[] strArray 갯수 25개 배열을 생성한다.
+		이 배열의 원소는 dArray원소의 값 => nArray원소의 값을 문자열로 합쳐서 저장한다.
+		예 : "0.983723 => 0", "76.56734005613602345 => 76"
+		strArray 배열 원소 25를 출력해보자*/
+        String[] strArray = new String[25];
+        int[] nArray = new int[25];
+        for (int i = 0; i < 25; i++) nArray[i] = (int) dArray[i];
+
+        for (int i = 0; i < strArray.length; i++) {
+            strArray[i] = dArray[i] + " => " + nArray[i];
+            System.out.println(strArray[i]);
+        }
+    }
+
+    public void arryTest4_4(int number) {
+        /*입력 => 숫자를 입력 받는다. 예를 들어 number 가 3이다.
+    		2차원 배열 int[][] nArray = new int[number][number]; 배열을 생성한다.
+		for 문을 이용하여서 원소에는 출력과 같이 되도록 숫자를 각 원소에 대입한다.
+		출력 =>
+		1, 2, 3
+		2, 3, 4
+		3, 4, 5
+		예를들어서 number 가 7이면
+		출력 =>
+		1, 2, 3, 4, 5, 6, 7
+		2, 3, 4, 5, 6, 7, 8
+		3, 4, 5, 6, 7, 8, 9
+		4, 5, 6, 7, 8, 9, 10
+		5, 6, 7, 8, 9, 10, 11
+		6, 7, 8, 9, 10, 11, 12
+		7, 8, 9, 10, 11, 12, 13*/
+        int[][] nArray = new int[number][number];
+        for (int i = 0; i < number; i++) {
+            for (int j = 0; j < number; j++) {
+                nArray[i][j] = i + j + 1;
+                System.out.print(nArray[i][j] + (j == number - 1 ? "" : ", "));
+            }
+            System.out.println();
+        }
+    }
+
+    public void arrayTest4_5(int number) {
+        /*입력 => 숫자를 입력 받는다. 예를 들어 number 가 3이다.
+		2차원 배열 char[][] square = new char[number][number];
+		for 문을 이용하여 출력처럼 데이터(한글 'ㅂ' 누르고 '한자'키를 누른다)를 대입해서 출력한다.
+		출력 =>
+		3행 3열
+		┌─┐
+		│ │
+		└─┘
+		예를 들어 입력이 7이면
+    출력 =>
+		7행 7열
+		┌─────┐
+		│     │
+		│     │
+		│     │
+		│     │
+		│     │
+		└─────┘*/
+        char[][] square = new char[number][number];
+        System.out.println(number + "행 " + number + "열");
+
+        for (int i = 0; i < number; i++) {
+            for (int j = 0; j < number; j++) {
+                if (i == 0 && j == 0) square[i][j] = '┌';
+                else if (i == 0 && j == number - 1) square[i][j] = '┐';
+                else if (i == number - 1 && j == 0) square[i][j] = '└';
+                else if (i == number - 1 && j == number - 1) square[i][j] = '┘';
+                else if (i == 0 || i == number - 1) square[i][j] = '─';
+                else if (j == 0 || j == number - 1) square[i][j] = '│';
+                else square[i][j] = ' ';
+                System.out.print(square[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    public void arrayTest4_6(int size) {
+        /*2차원 배열 char[][] chDiamond = new char[5][5]; 정방형만 가능
+		이 배열이 아래와 같이 출력되도록 값'*'을 for 문으로 직접 만들어서 for 문으로 출력한다.
+		출력예제:
+          *
+         ***
+        *****
+         ***
+          *
+
+           *
+          ***
+         *****
+        *******
+         *****
+          ***
+           *   */
+        char[][] chDiamond = new char[size][size];
+        int mid = size / 2;
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (Math.abs(mid - i) + Math.abs(mid - j) <= mid) {
+                    chDiamond[i][j] = '*';
+                } else {
+                    chDiamond[i][j] = ' ';
+                }
+                System.out.print(chDiamond[i][j]);
+            }
+            System.out.println();
+        }
     }
 }

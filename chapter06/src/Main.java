@@ -22,8 +22,14 @@ public class Main {
         obj.examArray04();
         obj.examArray05(); //0120 실습 에제들
         */
-        obj1.arrayTest1();
-        obj1.arrayTest2();
-        obj1.arrayTest3();
+//        obj1.arrayTest1();
+//        obj1.arrayTest2();
+//        obj1.arrayTest3();
+        obj1.arrayTest4_1();
+        obj1.arrayTest4_2();
+        obj1.arrayTest4_3();
+        obj1.arryTest4_4(6);
+        obj1.arrayTest4_5(7);
+        obj1.arrayTest4_6(5);
     }
 }
