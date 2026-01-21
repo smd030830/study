@@ -3,7 +3,8 @@
 public class Main {
     public static void main(String[] args) {
         chapter05 obj = new chapter05();
-
+        arrayTest obj1 = new arrayTest();
+/*
         obj.exam5_1();
         obj.exam5_2();
         obj.exam5_3();
@@ -19,6 +20,10 @@ public class Main {
         obj.examArray02();
         obj.examArray03();
         obj.examArray04();
-        obj.examArray05();
+        obj.examArray05(); //0120 실습 에제들
+        */
+        obj1.arrayTest1();
+        obj1.arrayTest2();
+        obj1.arrayTest3();
     }
 }
