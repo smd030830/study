@@ -122,12 +122,12 @@ public class arrayTest {
                 , {'*', ' ', '*', ' ', '*'}
                 , {' ', ' ', '*', '*', '*'}
         };
-        for (int i = 0; i < chInput.length; i++) {
-            for (int j = 0; j < chInput[i].length; j++) {
-                System.out.print(chInput[i][j]);
-            }
-            System.out.println();
-        }
+//        for (int i = 0; i < chInput.length; i++) {
+//            for (int j = 0; j < chInput[i].length; j++) {
+//                System.out.print(chInput[i][j]);
+//            }
+//            System.out.println();
+//        }
         //출력용 배열
         char[][] chOutput = new char[5][6];
         for (int i = 0; i < chInput.length; i++) {
@@ -142,5 +142,9 @@ public class arrayTest {
             }
             System.out.println();
         }
+    }
+    public void arrayTest4() {
+        /*
+        */
     }
 }
