@@ -25,11 +25,27 @@ public class Main {
 //        obj1.arrayTest1();
 //        obj1.arrayTest2();
 //        obj1.arrayTest3();
-        obj1.arrayTest4_1();
-        obj1.arrayTest4_2();
-        obj1.arrayTest4_3();
-        obj1.arryTest4_4(6);
-        obj1.arrayTest4_5(5);
-        obj1.arrayTest4_6(7);
+//        obj1.arrayTest4_1();
+//        obj1.arrayTest4_2();
+//        obj1.arrayTest4_3();
+//        obj1.arryTest4_4(6);
+//        obj1.arrayTest4_5(5);
+//        obj1.arrayTest4_6(7);
+
+
+        smartPhone.SmartPhone galaxy = new smartPhone.SmartPhone();
+        galaxy.model = "Galaxy S25+";
+        galaxy.brand = "Samsung";
+        galaxy.storage = 512;
+        galaxy.is5G = true;
+
+        smartPhone.SmartPhone iphone = new smartPhone.SmartPhone();
+        iphone.model = "iPhone 14 Pro";
+        iphone.brand = "Apple";
+        iphone.storage = 256;
+        iphone.is5G = true;
+
+        galaxy.showInfo();
+        iphone.showInfo();
     }
 }
