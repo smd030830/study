@@ -4,8 +4,10 @@ public class SmartPhone extends Phone {
     public boolean wifi;
 
     public SmartPhone(String model,String color) {
+        super(model,color);
         this.setModel(model);
         this.setColor(color);
+        System.out.println("스마트폰 생성자 실행");
     }
 
     public void setWifi(boolean wifi) {
