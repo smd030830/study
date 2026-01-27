@@ -32,11 +32,11 @@ public class Main {
         student.enroll(dbCourse);
         System.out.println(student.getName() + " 학생이 " + student.getEnrollments().size() + "개 과목을 신청했습니다.");
 
-        System.out.println("\n기말고사 성적 입력");
+        System.out.println("기말고사 성적 입력");
         student.setGradeForCourse("CS101", 98.5);
         student.setGradeForCourse("CS102", 85.0);
 
-        System.out.println("\n최종 성적 표");
+        System.out.println("최종 성적 표");
         System.out.println("학번: " + student.getStudentId());
         System.out.println("이름: " + student.getName());
         System.out.println();
