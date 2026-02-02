@@ -1,16 +1,28 @@
-package com.hospital;
+package animalHospital.src.main.java.com.hospital;
 
-public class Nurse {
-    public void giveMedicine(AnimalPatient patient) {
-        System.out.println(patient.getName() + "(" + patient.getId() + ")에게 약을 먹입니다. (1일 3회 중 1회)");
+class Nurse {
+    // 약 주기
+    void giveMedicine(AnimalPatient patient) {
+        System.out.println("환자: " + patient.name + " (식별번호: " + patient.idNumber + ")에게 약 먹임");
     }
 
-    public void checkVisit(AnimalPatient patient, String visitor, int hour) {
-        if (hour >= 15 && hour <= 20 && visitor.equals(patient.getOwnerName()) && patient.getVisitCount() < 1) {
-            patient.setVisitCount(1);
-            System.out.println("면회 승인: " + visitor + " 입장");
-        } else {
-            System.out.println("면회 불가: 조건(시간, 소유자 여부, 횟수)을 확인하세요.");
+    // 면회 가능 판단
+    boolean canAllowVisit(Owner owner, AnimalPatient patient, int currentTime) {
+        //주인 확인
+        if (patient.owner != owner) {
+            System.out.println("결과: 주인이 아님");
+            return false;
         }
+        //시간 확인 (15시~20시: 임의로 장힘)
+        if (currentTime < 15 || currentTime > 20) {
+            System.out.println("결과: 면회 시간이 아님 (현재: " + currentTime + "시)");
+            return false;
+        }
+        //횟수 확인
+        if (patient.visitCount >= 1) {
+            System.out.println("이미 오늘 면회를 함");
+            return false;
+        }
+        return true;
     }
 }
