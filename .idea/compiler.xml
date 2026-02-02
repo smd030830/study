@@ -10,9 +10,13 @@
         <module name="chapter02" />
         <module name="chapter07" />
         <module name="chapter08" />
+        <module name="animalHospital02" />
         <module name="chapter06_0126" />
         <module name="gamecharaters" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="animalHospital" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>

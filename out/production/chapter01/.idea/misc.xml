@@ -9,6 +9,11 @@
       <list>
         <option value="$PROJECT_DIR$/chapter02/pom.xml" />
         <option value="$PROJECT_DIR$/chapter03/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter06_0126/pom.xml" />
+        <option value="$PROJECT_DIR$/gamecharaters/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter07/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter08/pom.xml" />
+        <option value="$PROJECT_DIR$/animalHospital02/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
